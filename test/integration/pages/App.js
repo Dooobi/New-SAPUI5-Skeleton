@@ -10,13 +10,24 @@ sap.ui.require([
         Common) {
         "use strict";
 
-        var viewName = "Master";
+        var viewName = "App";
 
         Opa5.createPageObjects({
             onTheAppPage: {
                 baseClass: Common,
                 actions: {},
-                assertions: {}
+                assertions: {
+                    theAppShouldBeVisible: function() {
+                        this.waitFor({
+                            id: "app",
+                            viewName: viewName,
+                            success: function() {
+                                Opa5.assert.ok(true, "The app is loaded");
+                            },
+                            errorMessage: "Couldn't find the app"
+                        });
+                    }
+                }
             }
         });
     });
