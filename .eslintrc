@@ -6,9 +6,9 @@
 	"globals": {
 		"sap": true,
 		"jQuery": true,
-    "$": true,
-    "Promise" : true,
-    "QUnit" : true
+		"$": true,
+		"Promise": true,
+		"QUnit": true
 	},
 	"rules": {
 		"comma-dangle": [2, "never"],
