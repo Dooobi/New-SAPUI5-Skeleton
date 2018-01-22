@@ -164,5 +164,5 @@ module.exports = function(config) {
         customConfig["browsers"] = ["Chrome"];
     }
 
-    config.set(customConfig)
+    config.set(customConfig);
 };

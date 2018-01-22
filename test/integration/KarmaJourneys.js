@@ -51,7 +51,7 @@ sap.ui.define([
 
         QUnit.load();
         QUnit.start();
-    }
+    };
 
     sap.ui.require([
         "fis/tgh/__project__/__component__/test/integration/pages/Common",
