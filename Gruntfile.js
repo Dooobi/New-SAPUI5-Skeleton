@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 options: {
                     resources: {
                         cwd: 'webapp',
-                        prefix: projectConfig.ui5ComponentName.replace('.', '/')
+                        prefix: projectConfig.ui5ComponentName.replace(/\./g, '/')
                     },
                     dest: 'dist',
                     compress: true
