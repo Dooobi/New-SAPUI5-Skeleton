@@ -34,13 +34,24 @@ module.exports = function(grunt) {
                     dest: 'node_modules/karma-qunit/lib/adapter.js',
                 }, ],
             },
+            dist: {
+                files: [{
+                    cwd: 'webapp',
+                    expand: true,
+                    src: [
+                        '**',
+                        '!test/**'
+                    ],
+                    dest: 'dist'
+                }]
+            }
         },
 
         clean: {
             options: {
                 'force': true
             },
-            src: ['reports']
+            src: ['reports', 'dist']
         },
 
         sonarRunner: {
@@ -64,6 +75,20 @@ module.exports = function(grunt) {
             }
         },
 
+        openui5_preload: {
+            component: {
+                options: {
+                    resources: {
+                        cwd: 'webapp',
+                        prefix: projectConfig.ui5ComponentName.replace('.', '/')
+                    },
+                    dest: 'dist',
+                    compress: true
+                },
+                components: true
+            }
+        }
+
     });
 
     // jsHint
@@ -81,8 +106,12 @@ module.exports = function(grunt) {
     // Copy
     grunt.loadNpmTasks('grunt-contrib-copy');
 
+    // OpenUI5
+    grunt.loadNpmTasks('grunt-openui5');
+
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'copy:node_modules_mod', 'trimtrailingspaces', 'eslint']);
+    grunt.registerTask('default', ['clean', 'build']);
+    grunt.registerTask('build', ['copy:node_modules_mod', 'trimtrailingspaces', 'eslint', 'openui5_preload', 'copy:dist']);
     grunt.registerTask('jenkins', ['clean', 'copy:node_modules_mod', 'trimtrailingspaces', 'eslint']);
     grunt.registerTask('sonar', ['trimtrailingspaces', 'sonarRunner:analysis']);
 };
