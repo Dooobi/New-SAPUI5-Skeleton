@@ -1,0 +1,71 @@
+{
+	"welcomeFile": "/webapp/index.html",
+	"routes": [{
+		"path": "/webapp/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources",
+			"version": "1.46.7"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/webapp/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources",
+			"version": "1.46.7"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, 
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.46.7"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.46.7"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+	{
+		"path": "/TraineeReportsService/odata.srv/",
+		"target": {
+			"type": "destination",
+			"name": "TraineeReportsSrv"
+		},
+		"description": "OData Service for TraineeReports"
+	}, 
+	{
+		"path": "/services/userapi",
+		"target": {
+			"type": "service",
+			"name": "userapi"
+		},
+		"description": "UserAPI"
+	}],
+	"sendWelcomeFileRedirect": true,
+	"cacheControl": [{
+		"directive": "private",
+		"maxAge": 0,
+		"path": "**.html"
+	}, {
+		"directive": "private",
+		"maxAge": 0,
+		"path": "sap-ui-cachebuster-info.json"
+	}, {
+		"directive": "public",
+		"maxAge": 31536000
+	}]
+}

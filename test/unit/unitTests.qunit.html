@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unit tests for __projectName__</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+        data-sap-ui-libs="sap.m" data-sap-ui-resourceroots='{
+            "fis.tgh.__project__.__component__": "../../webapp/",
+            "fis.tgh.__project__.__component__.test": "../"
+        }' 
+        data-sap-ui-frameOptions='deny'>
+    </script>
+    <script>
+        sap.ui.require(
+            ["fis/tgh/__project__/__component__/test/unit/allTests"]
+        );
+    </script>
+</head>
+
+<body>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture"></div>
+</body>
+
+</html>

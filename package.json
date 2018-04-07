@@ -1,0 +1,47 @@
+{
+    "name": "fis.tgh.__project__.__component__",
+    "version": "1.0.0",
+    "description": "",
+    "author": "__author__",
+    "repository": {
+        "type": "git",
+        "url": "__git_repo_url__"
+    },
+    "scripts": {
+        "install-bower": "bower install",
+        "grunt-jenkins": "grunt jenkins",
+        "grunt-sonar": "grunt sonar",
+        "unit-test": "./node_modules/karma/bin/karma start karma-unit.conf.js",
+        "integration-test": "./node_modules/karma/bin/karma start karma-integration.conf.js"
+    },
+    "devDependencies": {
+        "grunt": "~1.0.1",
+        "grunt-contrib-clean": "~1.0.0",
+        "grunt-contrib-copy": "~1.0.0",
+        "grunt-contrib-jshint": "~1.1.0",
+        "grunt-eslint": "~19.0.0",
+        "grunt-openui5": "^0.12.0",
+        "grunt-sonar-runner": "~2.4.8",
+        "grunt-trimtrailingspaces": "~2.3.1",
+        "jshint-stylish": "~2.2.1",
+        "karma": "~1.5.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-cli": "~1.0.0",
+        "karma-coverage": "~1.1.1",
+        "karma-junit-reporter": "~1.2.0",
+        "karma-openui5": "~0.2.1",
+        "karma-phantomjs-launcher": "~1.0.4",
+        "karma-qunit": "~1.2.1",
+        "qunitjs": "~2.2.1"
+    },
+    "dependencies": {
+        "archiver": "^2.1.1",
+        "cheerio": "^1.0.0-rc.2",
+        "iconv": "^2.3.0",
+        "npm": "^5.8.0",
+        "request-debug": "^0.2.0",
+        "request-promise-native": "^1.0.5",
+        "tough-cookie-filestore": "0.0.1",
+        "yargs": "^11.0.0"
+    }
+}

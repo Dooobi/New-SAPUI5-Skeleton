@@ -1,0 +1,24 @@
+{
+    "name": "fis.tgh.__project__.__component__",
+    "description": "",
+    "main": "",
+    "authors": [
+        "s.seufert@fis-gmbh.de"
+    ],
+    "homepage": "",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "openui5-sap.ui.core": "openui5/packaged-sap.ui.core#1.46.5",
+        "openui5-sap.m": "openui5/packaged-sap.m#1.46.5",
+        "openui5-sap.ui.unified": "openui5/packaged-sap.ui.unified#1.46.5",
+        "openui5-sap.ui.layout": "openui5/packaged-sap.ui.layout#1.46.5",
+        "openui5-themelib_sap_belize": "openui5/packaged-themelib_sap_belize#1.46.5"
+    }
+}
