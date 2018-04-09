@@ -37,11 +37,10 @@
     "dependencies": {
         "archiver": "^2.1.1",
         "cheerio": "^1.0.0-rc.2",
-        "iconv": "^2.3.0",
+        "iconv-lite": "^0.4.21",
         "npm": "^5.8.0",
         "request-debug": "^0.2.0",
         "request-promise-native": "^1.0.5",
-        "tough-cookie-filestore": "0.0.1",
-        "yargs": "^11.0.0"
+        "tough-cookie-filestore": "0.0.1"
     }
 }

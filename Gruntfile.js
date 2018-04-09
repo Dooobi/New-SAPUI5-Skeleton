@@ -115,7 +115,7 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', ['clean', 'build']);
     grunt.registerTask('build', ['copy:node_modules_mod', 'trimtrailingspaces', 'eslint', 'openui5_preload', 'copy:dist', 'pack']);
-	grunt.registerTask('deploy', ['clean', 'build', 'deploy']);
+	grunt.registerTask('deploy', ['clean', 'build', 'scp-deploy']);
     grunt.registerTask('jenkins', ['clean', 'copy:node_modules_mod', 'trimtrailingspaces', 'eslint']);
     grunt.registerTask('sonar', ['trimtrailingspaces', 'sonarRunner:analysis']);
 };
