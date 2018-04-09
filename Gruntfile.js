@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             options: {
                 'force': true
             },
-            src: ['reports', 'dist']
+            src: ['reports', 'dist', 'dist.zip', 'authData.json']
         },
 
         sonarRunner: {
@@ -109,9 +109,13 @@ module.exports = function(grunt) {
     // OpenUI5
     grunt.loadNpmTasks('grunt-openui5');
 
+	// Scp
+	grunt.loadTasks('lib/grunt_tasks');
+	
     // Default task(s).
     grunt.registerTask('default', ['clean', 'build']);
-    grunt.registerTask('build', ['copy:node_modules_mod', 'trimtrailingspaces', 'eslint', 'openui5_preload', 'copy:dist']);
+    grunt.registerTask('build', ['copy:node_modules_mod', 'trimtrailingspaces', 'eslint', 'openui5_preload', 'copy:dist', 'pack']);
+	grunt.registerTask('deploy', ['clean', 'build', 'scp-deploy']);
     grunt.registerTask('jenkins', ['clean', 'copy:node_modules_mod', 'trimtrailingspaces', 'eslint']);
     grunt.registerTask('sonar', ['trimtrailingspaces', 'sonarRunner:analysis']);
 };

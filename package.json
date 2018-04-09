@@ -33,5 +33,13 @@
         "karma-phantomjs-launcher": "~1.0.4",
         "karma-qunit": "~1.2.1",
         "qunitjs": "~2.2.1"
+    },
+    "dependencies": {
+        "archiver": "^2.1.1",
+        "cheerio": "^1.0.0-rc.2",
+        "npm": "^5.8.0",
+        "request-debug": "^0.2.0",
+        "request-promise-native": "^1.0.5",
+        "tough-cookie-filestore": "0.0.1"
     }
 }
