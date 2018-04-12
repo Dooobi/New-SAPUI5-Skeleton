@@ -13,7 +13,7 @@
         "grunt-sonar": "grunt sonar",
 		"grunt-login": "grunt scp-login",
         "grunt-build": "grunt build",
-		"grunt-deploy": "grunt scp-deploy",
+		"grunt-deploy": "grunt deploy",
         "unit-test": "./node_modules/karma/bin/karma start karma-unit.conf.js",
         "integration-test": "./node_modules/karma/bin/karma start karma-integration.conf.js"
     },
@@ -40,7 +40,6 @@
     "dependencies": {
         "archiver": "^2.1.1",
         "cheerio": "^1.0.0-rc.2",
-        "iconv-lite": "^0.4.21",
         "npm": "^5.8.0",
         "request-debug": "^0.2.0",
         "request-promise-native": "^1.0.5",
