@@ -13,6 +13,7 @@
         "grunt-sonar": "grunt sonar",
 		"grunt-login": "grunt scp-login",
         "grunt-build": "grunt build",
+		"grunt-deploy": "grunt scp-deploy",
         "unit-test": "./node_modules/karma/bin/karma start karma-unit.conf.js",
         "integration-test": "./node_modules/karma/bin/karma start karma-integration.conf.js"
     },
